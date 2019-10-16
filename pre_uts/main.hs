@@ -6,7 +6,8 @@ data Expr = C Float
           | Expr :- Expr
           | Expr :* Expr 
           | Expr :/ Expr
-
+        --   | V String
+        --   | Let String Expr Expr
 e1 = (C 10 :+ (C 8 :/ C 2)) :* (C 7 :- C 4)
 e2 = 
 evaluate           :: Expr -> Float
